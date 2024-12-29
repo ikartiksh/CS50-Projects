@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function checkMultiChoice(event) {
+
+                // Get the element which triggered the event
+                let button = event.target;
+
+                // Check if the element's inner HTML matches expected answer
+                if (button.innerHTML == 'Lev Yashine') {
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else {
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+            }
+
+            function checkFreeResponse(event) {
+
+                // Get the element which triggered the event
+                let button = event.target;
+
+                // Get the input element corresponding to the button
+                let input = button.parentElement.querySelector('input');
+
+                // Check for correct answer
+                if (input.value === 'France') {
+                    input.style.backgroundColor = 'Green';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else {
+                    input.style.backgroundColor = 'Red';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Who is the only goalkeeper to ever win a BALLON D'OR?</h3>
+                <button onclick="checkMultiChoice(event)">Manuel Neur</button>
+                <button onclick="checkMultiChoice(event)">Peter Czech</button>
+                <button onclick="checkMultiChoice(event)">Lev Yashine</button>
+                <button onclick="checkMultiChoice(event)">Buffon</button>
+                <button onclick="checkMultiChoice(event)">Peter Schiemecel</button>
+                <p class="feedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Which Football Fedderation hosts the BALLON D'OR ceremony?</h3>
+                <input type="text"></input>
+                <button onclick="checkFreeResponse(event)">Check Answer</button>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </body>
+</html>
