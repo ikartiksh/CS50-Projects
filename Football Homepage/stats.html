@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - Football Facts Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">FOOTBALL FACTOS!</div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="players.html">Retro Players</a></li>
+            <li><a href="stats.html">Statistics</a></li>
+            <li><a href="awards.html">Football Awards</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="statistics">
+            <h2>Football Statistics</h2>
+            <div class="stats-container">
+                <div class="stats-card">
+                    <h3>World Cup Winners</h3>
+                    <canvas id="worldCupChart"></canvas>
+                </div>
+                <div class="stats-card">
+                    <h3>Top Goal Scorers</h3>
+                    <canvas id="goalScorersChart"></canvas>
+                </div>
+                <div class="stats-filters">
+                    <select id="yearFilter">
+                        <option value="all">All Time</option>
+                        <option value="2020">2020s</option>
+                        <option value="2010">2010s</option>
+                        <option value="2000">2000s</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Football Factos!. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="statistics.js"></script>
+</body>
+</html>
