@@ -11,7 +11,18 @@ const players = [
         achievements: "1986 World Cup, 2 Serie A titles",
         bio: "Famous for the 'Hand of God' goal and leading Argentina to World Cup glory..."
     },
-    // Add more players
+    {
+        name: "Lionel Messi",
+        country: "Argentina",
+        achievements: "1 World Cups, 879 goals",
+        bio: "The GOAT"
+    },
+    {
+        name: "Zlatan Ibrahimovic",
+        country: "Sweden",
+        achievements: "0 World Cups, 659 goals",
+        bio: "Widely regarded as one of the greatest strikers of all time..."
+    },
 ];
 
 function loadPlayers() {
