@@ -25,6 +25,10 @@ function loadLatestNews() {
             title: "International Fixtures",
             content: "Upcoming international matches and tournament updates..."
         }
+        {
+            title: "League Fixtures",
+            content: "Upcoming League matches and tournament updates..."
+        }
     ];
 
     const newsContainer = document.getElementById('news-container');
